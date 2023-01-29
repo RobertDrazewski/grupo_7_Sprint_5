@@ -1,0 +1,99 @@
+[
+ {
+  "id": 1,
+  "nombre": "pepe",
+  "mail": "pepe@gmail.com",
+  "pais": "Argentina",
+  "num": 14321432,
+  "usuario": "pepito",
+  "contraseña": "ñdjghñiaweugdfciuwag"
+ },
+ {
+  "id": 2,
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "12345678",
+  "usuario": "alberte",
+  "contraseña": "ehgsfuyceqAGÑFC"
+ },
+ {
+  "id": 3,
+  "nombre": "adrian",
+  "mail": "adrian@hotmail.com",
+  "pais": "mexico",
+  "num": "56787899898",
+  "usuario": "adrian02",
+  "contraseña": "idqhxgviqwcugñadFC"
+ },
+ {
+  "id": 4,
+  "nombre": "Alberso",
+  "mail": "drazewski@gmail.com",
+  "pais": "mexico",
+  "num": "1234567",
+  "usuario": "pepito perez",
+  "contraseña": "lutdlutf"
+ },
+ {
+  "id": 5,
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "123455678990",
+  "usuario": "pepito",
+  "contraseña": "ltdlu",
+  "perfil": "admin"
+ },
+ {
+  "usuario": "alberte",
+  "contraseña": "wñeausgfpi2quewgafs"
+ },
+ {
+  "id": 6,
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "123455678990",
+  "usuario": "pepito",
+  "perfil": "admin",
+  "avatar": "img-1675002982852.jpg"
+ },
+ {
+  "id": 0.2228379300436547,
+  "nombre": "Manolo",
+  "mail": "manolito@gmail.com",
+  "pais": "España",
+  "num": "123123123",
+  "usuario": "manolito",
+  "perfil": "admin",
+  "avatar": "img-1675004558734.jpg"
+ },
+ {
+  "nombre": "Manolo",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "123456989999",
+  "usuario": "alberte",
+  "perfil": "admin",
+  "avatar": "img-1675004656720.jpg"
+ },
+ {
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "123455678990",
+  "usuario": "pepito",
+  "perfil": "admin",
+  "avatar": "img-1675004675353.jpg"
+ },
+ {
+  "nombre": "pepe",
+  "mail": "drazewski@gmail.com",
+  "pais": "Colombia",
+  "num": "123455678990",
+  "usuario": "alberte",
+  "perfil": "cweagsvcwradgv ",
+  "avatar": "img-1675004900938.jpg"
+ }
+]
