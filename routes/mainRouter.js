@@ -5,7 +5,7 @@ const path = require ('path');
 
 // const varDeValidacion = require('./validations');
 const mainController= require('../controllers/mainController');
-const usersController = require('../controllers/usersController');
+/*const usersController = require('../controllers/usersController');*/
 const productControllers = require('../controllers/productControllers')
 const carritoControllers = require('../controllers/mainControllers')
 /*ESTO LO AGREGO FACU, SE PUEDE BORRAR*/
@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 });
 
 let fileUpload = multer({ storage: storage});
-
+/*
 const usersStorage = multer.diskStorage({
     destination: (req, file, callback)=> {
         let folder = path.join(__dirname, '../public/img')
@@ -33,7 +33,7 @@ const usersStorage = multer.diskStorage({
     }
 });
 
-let userFileUpload = multer({ storage: usersStorage});
+let userFileUpload = multer({ storage: usersStorage});*/
 
 
 
@@ -106,9 +106,10 @@ router.delete("/:id/deleteProduct", fileUpload.single('img'), productControllers
 router.get('/login',/*logUsuarioMiddleware ,*/mainController.login)
 
 
-// Register
+// Register 
+/*
 router.get('/register',userFileUpload.single('avatar'), usersController.register)
-router.post('/register', userFileUpload.single('avatar'),/* logUsuarioMiddleware (o tambien validaciones) varDeValidacion ,*/usersController.create)
+router.post('/register', userFileUpload.single('avatar'),/* logUsuarioMiddleware (o tambien validaciones) varDeValidacion ,*//*  usersController.create) */
 //router.get('/userEdit', usersController.getEditUser) // flor y rober
 //router.post('/userEdit',usersController.editUser)// flor y rober
 
