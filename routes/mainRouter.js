@@ -100,10 +100,10 @@ router.get("/:id/deleteProduct", fileUpload.single('img'), productControllers.de
 router.delete("/:id/deleteProduct", fileUpload.single('img'), productControllers.deleteSave)
 
 
-
+//ESTO YA ESTÁ EN USERROUTER.JS
 //login
-
-router.get('/login',/*logUsuarioMiddleware ,*/mainController.login)
+/*
+router.get('/login',/*logUsuarioMiddleware ,*/ /*mainController.login)*/
 
 
 // Register 

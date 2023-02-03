@@ -2,6 +2,7 @@ const express = require('express');
 const userRouter= express.Router();
 const path = require ('path'); 
 const usersController = require('../controllers/usersController');
+const mainController= require('../controllers/mainController');
 
 const multer = require('multer');
 
@@ -37,7 +38,10 @@ let userFileUpload = multer({ storage: usersStorage});
 
 
 
+//login
 
+userRouter.get('/login',/*logUsuarioMiddleware ,*/mainController.login);
+userRouter.post('/login',usersController.postLogin)// flor y rober
 
 
 
@@ -45,7 +49,7 @@ let userFileUpload = multer({ storage: usersStorage});
 // Register
 userRouter.get('/register',userFileUpload.single('avatar'), usersController.register)
 userRouter.post('/register', userFileUpload.single('avatar'),/* logUsuarioMiddleware (o tambien validaciones) varDeValidacion ,*/usersController.create)
-//router.get('/userEdit', usersController.getEditUser) // flor y rober
-//router.post('/userEdit',usersController.editUser)// flor y rober
+userRouter.get('/userEdit', usersController.getUserEdit) // flor y rober
+userRouter.post('/userEdit',usersController.userEdit)// flor y rober
 
 module.exports= userRouter
