@@ -78,5 +78,16 @@
   "password": "$2a$10$osGr9cTVpn82wTlbYZ7UG.fqCLGb3FfA2JLcQtEBWtUBRJS7hgC3O",
   "profile": "Administrador",
   "avatar": "avion-002.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Pepe ",
+  "email": "pepito@gmail.com",
+  "country": "argelia",
+  "phoneNumber": "545444444431",
+  "password": "$2a$10$ynVWT3U8qZRRIjClGnsmuuFU.KstSFimu/M0n59dJDA6ajS8Icu3m",
+  "profile": "Administrador",
+  "avatar": ""
  }
 ]
+

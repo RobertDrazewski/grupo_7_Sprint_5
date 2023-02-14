@@ -4,15 +4,13 @@ const session = require('express-session');
 const path = require('path')
 const port = process.env.PORT || 3000;
 const mainRouter =require('./routes/mainRouter');
-const userRouter = require('./routes/userRouter');
 const userRoutes = require('./routes/usersRoutes')
 
 app.use(express.json())
 app.use(express.static('public')); 
 app.use(session({secret: 'Mi string secreto'}))
 app.use(mainRouter);
-app.use(userRouter);
-app.use(userRoutes)
+app.use(userRoutes);
 
 app.set('view engine','ejs');
 app.set('views','views');

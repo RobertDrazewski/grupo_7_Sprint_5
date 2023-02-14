@@ -30,7 +30,7 @@ router.use(express.urlencoded({extended: true}))
 router.use(express.json())
 router.use(methodOverride('_method'))
 
-router.get('/register', userFileUpload.single('avatar') ,userControllers.getRegister)
+router.get('/register', userFileUpload.single('avatar'),guestMiddleware ,userControllers.getRegister)
 router.post('/register', userFileUpload.single('avatar'),userCreateValidation ,userControllers.register)
 router.get('/edit/:id', userControllers.getEdit)
 router.put('/edit/:id', userControllers.edit)
