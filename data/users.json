@@ -1,22 +1,78 @@
 [
  {
   "id": 1,
-  "nombre": "Guillermo",
-  "mail": "willy.pavon@hotmail.com",
+  "nombre": "Robert",
+  "mail": "robert@gmail.com",
   "pais": "Argentina",
-  "num": "3517355313",
-  "usuario": "Williamson",
-  "perfil": "usuario",
-  "avatar": "img-1675437211380.jpg"
+  "num": "21254587",
+  "usuario": "Robert",
+  "password": "$2a$10$WpzSRk9c/Azp5Go/KKd7fucu9YB4wAS0fryfaIEAnENTd1v/eNqsO",
+  "perfil": "administrador",
+  "avatar": "img-1676082001036.jpg"
  },
  {
   "id": 2,
-  "nombre": "palomo 1",
-  "mail": "willy.pavon@hotmail.com",
+  "nombre": "Maga",
+  "mail": "maga@gmail.com",
   "pais": "Argentina",
-  "num": "3517355313123",
-  "usuario": "Williamson",
-  "perfil": "usuario",
-  "avatar": "img-1675437241303.jpg"
+  "num": "2215372818",
+  "usuario": "Maga",
+  "password": "$2a$10$8eJh0wx140/j0829Sfrhx.drE56wDmgi33pecVcp3iuGJbsEDdUHG",
+  "perfil": "administrador",
+  "avatar": "img-1676082470270.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Agustin",
+  "mail": "agus@gmail.com",
+  "pais": "Colombia",
+  "num": "2234566875",
+  "usuario": "Tincho",
+  "password": "$2a$10$BuZ99VrPgRi7LrJ/00lJ9uP.PBNb.DMyfoSio2rIPKBgSYNAzt4MK",
+  "perfil": "Cliente",
+  "avatar": "img-1676241780157.jfif"
+ },
+ {
+  "id": 4,
+  "name": "fanku 87",
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "userName": "Fanku",
+  "password": "$2a$10$5CDBrxemVvKnWGr1lpWCTuT8WOuKuchXj2mVBbUTJfrQ9bBnI4rEO",
+  "profile": "Cliente",
+  "avatar": "img-1676242123820.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Florencia",
+  "email": "flor@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2245178652",
+  "userName": "Flor",
+  "password": "$2a$10$LkDQvCUfF2U5Yg1qLnBRZuR.TPqcKvjA2/MEkJUcIabi5Ik3EE61O",
+  "profile": "administrador",
+  "avatar": "img-1676242270493.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Guillermo",
+  "email": "guille@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2253654721",
+  "userName": "Guille",
+  "password": "$2a$10$CTlAP2Ys/V3NI3E8myD0E.pkmh8bR.TGsrU45QlxpoUPlJwvPXujG",
+  "profile": "Administrador",
+  "avatar": "img-1676242465508.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Robertewrqwe",
+  "mail": "rwer@gmail.com",
+  "pais": "wqerqwer",
+  "num": "werwqerwq",
+  "usuario": "erwqerwqer",
+  "password": "$2a$10$6wOrSVD3oVU925..xfgzz.8q7C1v/t7uI4LdSjKdC2Ye0DQeZrMX2",
+  "perfil": "werwqerwqe",
+  "avatar": "img-1676246448755.jpg"
  }
 ]

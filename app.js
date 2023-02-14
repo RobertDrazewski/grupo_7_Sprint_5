@@ -1,29 +1,22 @@
 const express = require('express');
 const app = express();
-//const path = require('path');
-const session = require('express-session'); //para configurarlo como Middleware se escribe la linea 11 app.use
-
-
+const session = require('express-session');
+const path = require('path')
+const port = process.env.PORT || 3000;
 const mainRouter =require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
+const userRoutes = require('./routes/usersRoutes')
 
+app.use(express.json())
 app.use(express.static('public')); 
+app.use(session({secret: 'Mi string secreto'}))
 app.use(mainRouter);
 app.use(userRouter);
-app.use(session( {secret:"mensaje vuelta el mundo"}));
-
-// configuramos ejs como template engine
+app.use(userRoutes)
 
 app.set('view engine','ejs');
-
-// configuramos la carpeta de vistas
-
 app.set('views','views');
 
-
-// setiamos la puerta de entrada (entry point) y escuchamos la respuesta
-
-const port = process.env.PORT || 3000;
 app.listen(port, ()=> console.log(`Servidor corriendo en el puerto ${port}`));
 
 

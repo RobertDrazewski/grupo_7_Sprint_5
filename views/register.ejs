@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de resitro</title>
-    <link rel="stylesheet" href="/css/register.css">
-   
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/groupStyle.css">
+    <title>registro</title>
 </head>
 <body>
-
     <%- include('./partials/header') %>
-
     <main>
-        <h2>Formulario de registro</h2>
-        
-        <form class="pform" action="/register" method="POST" enctype="multipart/form-data">
-            
-            
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" required>
-
-        
-            <input type="email" name="mail" id="email" placeholder="E-mail" required>
-           
-            
-            <input type="text" name="pais" id="país" placeholder="País" required>
-
-        
-            <input type="text" name="num" id="celular" placeholder="N° de celular" required>
-            
-         
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required>
-            
-       
-            <input type="password" name="contraseña" id="password" placeholder="Contraseña" required>
-
-            <input type="text" name="perfil"  placeholder="Admin o usuario" required>
-
+        <% if(locals.errors) { 
+            errors.forEach(err => { %>
+            <p style="color: orange"><%= err.msg %> </p>
+        <% }); }%> 
+        <p style="color: orange"><%=locals.mensaje ? locals.mensaje : "" %></p>
+        <form action="/register" method="POST">
+            <label for="">Nombre</label>
+            <br>
+            <input type="text" name="name" value="<%= locals.old && old.name ? old.name : "" %>">
+            <br><br>
+            <label for="">Correo</label>
+            <br>
+            <input type="email" name="email" value="<%= locals.old && old.email ? old.email : "" %>">
+            <br><br>
+            <label for="">Pais</label>
+            <br>
+            <input type="text" name="country" value="<%= locals.old && old.country ? old.country : "" %>">
+            <br><br>
+            <label for="">Celular</label>
+            <br>
+            <input type="text" name="phoneNumber" value="<%= locals.old && old.phoneNumber ? old.phoneNumber : "" %>">
+            <br><br>
+            <label for="">Contraseña</label>
+            <br>
+            <input type="password" name="password">
+            <br><br>
+            <select name="profile" id="">
+                <% let profile = ['Administrador', 'Cliente'] %>
+                <% for(let i = 0; i < profile.length; i++) {%>  
+                <option value="<%= profile[i] %>"><%= profile[i] %></option>
+                <% } %> 
+            </select>
+            <br><br>
             <label for="">Cargar imagen de perfil</label>
+            <br>
             <input type="file" name="avatar">
-
-         <div class="contenedor-botones">
-            <input class="button-enviar" type="submit" value="Enviar" href="/">
-
-            <a href="login" class="button-enviar">Iniciar sesión</a>
-        </div>
-
-           
- 
-           
-            </form>
-                
-            
+            <br><br>
+            <input type="submit" value="Registrarme">
+        </form>
     </main>
- 
-
     <%- include('./partials/footer') %> 
-    
 </body>
 </html>

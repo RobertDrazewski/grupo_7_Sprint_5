@@ -27,7 +27,7 @@ const usersStorage = multer.diskStorage({
         callback(null, folder)
     }, 
     filename:(req, file, callback) =>{
-        let img = 'img-' + Date.now() + path.extname(file.originalname);//nose porque no me guarda el nombre bien
+        let img = 'img-' + Date.now() + path.extname(file.originalname);
         callback(null, img)
     }
 });
@@ -40,16 +40,16 @@ let userFileUpload = multer({ storage: usersStorage});
 
 //login
 
-userRouter.get('/login',/*logUsuarioMiddleware ,*/mainController.login);
-userRouter.post('/login',usersController.postLogin)// flor y rober
+userRouter.get('/login2',/*logUsuarioMiddleware ,*/usersController.getLogin);
+userRouter.post('/login2',usersController.login)// flor y rober
 
 
 
 
 // Register
-userRouter.get('/register',userFileUpload.single('avatar'), usersController.register)
-userRouter.post('/register', userFileUpload.single('avatar'),/* logUsuarioMiddleware (o tambien validaciones) varDeValidacion ,*/usersController.create)
-userRouter.get('/userEdit', usersController.getUserEdit) // flor y rober
-userRouter.post('/userEdit',usersController.userEdit)// flor y rober
+userRouter.get('/register2',userFileUpload.single('avatar'), usersController.getRegister)
+userRouter.post('/register2', userFileUpload.single('avatar'), usersController.create)
+userRouter.get('/userEdit2', usersController.getUserEdit) // flor y rober
+userRouter.post('/userEdit2',usersController.userEdit)// flor y rober
 
 module.exports= userRouter

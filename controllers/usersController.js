@@ -1,15 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-// para usar el metodo PUT y metodo DELETE
-
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users= JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
-
 const usersController = {
-
-register: (req,res) => {//equivaldria al getRegister
+getRegister: (req,res) => {
     return res.render('register')
 },
 //3/2 Guille Facu
@@ -23,11 +19,9 @@ generateID: (req,res) =>{
     } 
 
 },
-//------
 create: (req,res) => {//equivaldria al boton de crear?
    //G F
     let pruebaUserId = usersController.generateID();
-    //--
     let createUser = {
         id: pruebaUserId,
         nombre:req.body.nombre,
@@ -35,42 +29,20 @@ create: (req,res) => {//equivaldria al boton de crear?
         pais: req.body.pais,
         num: req.body.num,
         usuario: req.body.usuario,
-        contraseña: req.body.contraseña,
+        password: bcrypt.hashSync(req.body.password),
         perfil: req.body.perfil,
         avatar: req.file.filename
-    }
-   
-    
+    }    
 users.push(createUser);
-
 fs.writeFileSync(usersFilePath,JSON.stringify(users,null,' '));
-
 res.redirect('login');
-
 },
-postLogin:(req,res) => {//equivaldria al postLogin...
-    let idUser = {
-        usuario: req.body.usuario,
-        contraseña: req.body.contraseña
-    }
+getLogin: (req, res) => {
+    res.render('login')
+},
+login: (req, res) => {
     
-/*login: (req,res) => {//equivaldria al postLogin...
-    let idUser = {
-        usuario: req.body.usuario,
-        contraseña: req.body.contraseña
-    }*/
-   /* const userData = {
-        email,
-        password: bcrypt.hashSync(password,10)
-    }*/
-
-users.push(idUser);
-
-fs.writeFileSync(usersFilePath,JSON.stringify(users,null,' '));
-
-res.redirect('productDetail');
 },
-
 // flor robert
 getUserEdit: (req,res) => {//equivaldria al...
     res.render('register')

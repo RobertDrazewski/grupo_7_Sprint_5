@@ -75,7 +75,9 @@ body{
 
     
 }
-
+.remember{ /*Agrgué esta clase, se puede eliminar junto con el label e input del login.ejs*/
+    width: 12px;
+}
 
 main form{
     display:flex ;
