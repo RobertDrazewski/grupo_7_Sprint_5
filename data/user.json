@@ -11,10 +11,13 @@
  },
  {
   "id": 2,
-  "name": "fanku 87",
+  "name": "fanku",
   "email": "snoya1987@gmail.com",
-  "password": "$2a$10$48Lt369WvGjXnuAA7buKfu/P97VN.Jf9pYf9Tw.hPBlCghouOEKMG",
-  "profile": "Cliente"
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "password": "$2a$10$dRIqf4CWl6LlJV8WO13OVOlbL88Ro8I5b4EWYGr03HfHMhgZjpntS",
+  "profile": "Administrador",
+  "avatar": "el_pato_lucas.jpg"
  },
  {
   "id": 3,
