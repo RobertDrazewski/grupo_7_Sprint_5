@@ -85,5 +85,15 @@
   "password": "$2a$10$WyiXC/ne.cLF3usamS56e.g0eaX/f5e2fwzNsmdrxXve9dpcgpQFK",
   "profile": "Administrador",
   "avatar": "avion.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Alejandro",
+  "email": "ale@gmail.com",
+  "country": "Colombia",
+  "phoneNumber": "223568879",
+  "password": "$2a$10$H0Zi1UvNTX5QNluOYt23YOEU90NOlSvNlFShJuJ3jqhRpqN/1E8D2",
+  "profile": "Cliente",
+  "avatar": "banner-transparent.jpg"
  }
 ]
