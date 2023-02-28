@@ -23,15 +23,8 @@ create: (req,res) => {//equivaldria al boton de crear?
    //G F
     let pruebaUserId = usersController.generateID();
     let createUser = {
-        id: pruebaUserId,
-        nombre:req.body.nombre,
-        mail: req.body.mail,
-        pais: req.body.pais,
-        num: req.body.num,
-        usuario: req.body.usuario,
-        password: bcrypt.hashSync(req.body.password),
-        perfil: req.body.perfil,
-        avatar: req.file.filename
+        ...req.body,
+        password: bcrypt.hashSync(req.body.password, 10)
     }    
 users.push(createUser);
 fs.writeFileSync(usersFilePath,JSON.stringify(users,null,' '));

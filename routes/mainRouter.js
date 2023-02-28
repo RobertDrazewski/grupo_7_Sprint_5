@@ -70,7 +70,7 @@ router.get("/crearProducto",fileUpload.single('img') , productControllers.getCre
 router.post("/crearProducto", fileUpload.single('img') ,productControllers.create)/*configurado con multer */
 
 //(3) ProductDetail --> (products/:id)
-router.get('/productDetail',mainController.productDetail)
+router.get('/productDetail',fileUpload.single('img'), productControllers.product)
 
 //(4) Products (POST) (Acción de creación (a donde se envía el formulario )
 

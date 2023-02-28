@@ -13,11 +13,8 @@
   "id": 2,
   "name": "fanku 87",
   "email": "snoya1987@gmail.com",
-  "country": "Argentina",
-  "phoneNumber": "2215372818",
-  "password": "$2a$10$NX.kRfK8mf6OJbQKWohxhOrAlwwQ943VydspzlT11kVeGBpeQK/Ci",
-  "profile": "Administrador",
-  "avatar": "bariloche.jpg"
+  "password": "$2a$10$48Lt369WvGjXnuAA7buKfu/P97VN.Jf9pYf9Tw.hPBlCghouOEKMG",
+  "profile": "Cliente"
  },
  {
   "id": 3,
@@ -78,5 +75,15 @@
   "password": "$2a$10$osGr9cTVpn82wTlbYZ7UG.fqCLGb3FfA2JLcQtEBWtUBRJS7hgC3O",
   "profile": "Administrador",
   "avatar": "avion-002.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Guille",
+  "email": "guille@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "2215372818",
+  "password": "$2a$10$WyiXC/ne.cLF3usamS56e.g0eaX/f5e2fwzNsmdrxXve9dpcgpQFK",
+  "profile": "Administrador",
+  "avatar": "avion.jpg"
  }
 ]

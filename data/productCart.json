@@ -26,19 +26,5 @@
         "vehiculo": "Servicio de combi",
         "excursion1": "Senderismo en Parque Borchex",
         "excursion2": "Noche de Djs en la fabrica"
-    },
-    {
-        "id": "2",
-        "img": "img-1674160077690.jpg",
-        "destino": "Junin",
-        "dias": "gfh",
-        "precio": "hfdghg",
-        "ofertas": "hgh",
-        "ida": "fdhg",
-        "vuelta": "fgdh",
-        "hospedaje": "fgh",
-        "vehiculo": "fdgh",
-        "excursion1": "ghdf",
-        "excursion2": "fdgh"
     }
 ]

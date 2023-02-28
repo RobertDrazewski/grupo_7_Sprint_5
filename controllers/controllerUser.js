@@ -28,7 +28,7 @@ const Users = {
                 fs.writeFileSync(path.join(__dirname, '../data/user.json'), JSON.stringify(user, null, " "))
                 res.redirect('login')
             } else {
-                res.render('register', { "mensaje": "Ese correo ya se encuentra registrado, por favor ingrese otro", "old": req.body})
+                res.render('register2', { "mensaje": "Ese correo ya se encuentra registrado, por favor ingrese otro", "old": req.body})
                 
                 //Esta funcion No me termina de convencer, me gustaria que pise el mensaje del err de email
             }
