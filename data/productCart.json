@@ -1,30 +1,56 @@
 [
-    {
-        "id": "0",
-        "img": "bariloche-005.jpg",
-        "destino": "Bariloche",
-        "dias": "11",
-        "precio": "27.500",
-        "ofertas": "13% OFF",
-        "ida": "08/04/23",
-        "vuelta": "20/04/23",
-        "hospedaje": "Hotel del Sur",
-        "vehiculo": "Servicio de combi",
-        "excursion1": "Excursion Cerro Catedral",
-        "excursion2": "Travesia 4x4"
-    },
-    {
-        "id": "1",
-        "img": "cumbresita.jpg",
-        "destino": "Córdoba",
-        "dias": "8",
-        "precio": "27.500",
-        "ofertas": "25% OFF",
-        "ida": "08/04/23",
-        "vuelta": "12/05/23",
-        "hospedaje": "Morada Hostel",
-        "vehiculo": "Servicio de combi",
-        "excursion1": "Senderismo en Parque Borchex",
-        "excursion2": "Noche de Djs en la fabrica"
-    }
+ {
+  "id": "0",
+  "img": "bariloche-005.jpg",
+  "destino": "Bariloche",
+  "dias": "11",
+  "precio": "27.500",
+  "ofertas": "13% OFF",
+  "ida": "08/04/23",
+  "vuelta": "20/04/23",
+  "hospedaje": "Hotel del Sur",
+  "vehiculo": "Servicio de combi",
+  "excursion1": "Excursion Cerro Catedral",
+  "excursion2": "Travesia 4x4"
+ },
+ {
+  "id": "1",
+  "img": "cumbresita.jpg",
+  "destino": "Córdoba",
+  "dias": "8",
+  "precio": "27.500",
+  "ofertas": "25% OFF",
+  "ida": "08/04/23",
+  "vuelta": "12/05/23",
+  "hospedaje": "Morada Hostel",
+  "vehiculo": "Servicio de combi",
+  "excursion1": "Senderismo en Parque Borchex",
+  "excursion2": "Noche de Djs en la fabrica"
+ },
+ {
+  "id": "4",
+  "destino": "junin",
+  "dias": "12",
+  "precio": "56",
+  "ofertas": "",
+  "ida": "24/3",
+  "vuelta": "",
+  "hospedaje": "",
+  "vehiculo": "",
+  "excursion1": "",
+  "excursion2": "uspallata"
+ },
+ {
+  "id": "4",
+  "destino": "junin",
+  "dias": "12",
+  "precio": "20000",
+  "ofertas": "tfpgu",
+  "ida": "24/3",
+  "vuelta": "6/2",
+  "hospedaje": "hostel el sol",
+  "vehiculo": "4x4",
+  "excursion1": "óidshxv",
+  "excursion2": "uspallata"
+ }
 ]
