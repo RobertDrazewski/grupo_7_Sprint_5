@@ -13,7 +13,21 @@
   "excursion1": "Excursion Cerro Catedral",
   "excursion2": "Travesia 4x4",
   "imgDescription": "5"
-
- }
+ },
  
+ {
+  "id": "5",
+  "destino": "jujuy",
+  "dias": "12",
+  "precio": "20000",
+  "ofertas": "20 %",
+  "ida": "24/3",
+  "vuelta": "6/2",
+  "hospedaje": "hotel cachapu",
+  "vehiculo": "4x4",
+  "excursion1": "potrerillos",
+  "excursion2": "lagos",
+  "imgDescription": "Las calles de mendoza son iguales a las de salta",
+  "img": "img-1678149238959.jpg"
+ }
 ]

@@ -18,7 +18,8 @@ const productControllers = {
     create: (req, res) =>{
         let allProduct = fs.readFileSync(path.join(__dirname, "../data/productCart.json" ) ,"utf-8");
         let mostrar = JSON.parse(allProduct);
-        let newProduct = req.body
+        let newProduct = {...req.body,
+        img:req.file.filename}
         mostrar.push(newProduct) ;
 
         fs.writeFileSync(path.join(__dirname, "../data/productCart.json" ), JSON.stringify(mostrar,null, " "));
