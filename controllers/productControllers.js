@@ -16,14 +16,18 @@ const productControllers = {
     //     res.render('./carrito/productCart', {'producto': producto})//esta no la uso
     // },    
     create: (req, res) =>{
-        let allProduct = fs.readFileSync(path.join(__dirname, '../data/productCart.json'), 'utf-8');
-        let mostrar = JSON.parse(allProduct)
-        let newProduct = req.body;
-        mostrar.push(newProduct);
-        fs.writeFileSync(path.join(__dirname, '../data/productCart.json'), JSON.stringify(mostrar,null," "))
-        res.send(mostrar)
+        let allProduct = fs.readFileSync(path.join(__dirname, "../data/productCart.json" ) ,"utf-8");
+        let mostrar = JSON.parse(allProduct);
+        let newProduct = req.body
+        mostrar.push(newProduct) ;
 
-    }, 
+        fs.writeFileSync(path.join(__dirname, "../data/productCart.json" ), JSON.stringify(mostrar,null, " "));
+
+        res.send(mostrar);
+
+        
+        }, 
+
     edit: (req, res) => {
         let idProduct = req.params.id;
         const modifyProduct = producto.filter(x => x.id == idProduct)
