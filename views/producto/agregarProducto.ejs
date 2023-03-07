@@ -11,7 +11,7 @@
 <body class="bodyClass">
     <%- include('../partials/header') %>    
     <h2>Agregar producto</h2>
-    <form action="/prueba" method="POST" enctype="multipart/form-data" >
+    <form action="/crearProducto" method="POST" enctype="multipart/form-data" >
         <label for="">Id</label>
         <input type="text" name="id">
         <br>
@@ -47,6 +47,9 @@
         <br>
         <label for="">Cargar imagen de destino</label>
         <input type="file" name="img">
+        <br>
+        <label for="">Descripción </label>
+        <input type="text" name="imgDescription">
         <br>
         <button type="submit">Crear</button>
     </form>

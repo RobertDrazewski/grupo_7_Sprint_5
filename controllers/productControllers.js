@@ -16,40 +16,18 @@ const productControllers = {
     //     res.render('./carrito/productCart', {'producto': producto})//esta no la uso
     // },    
     create: (req, res) =>{
-        if(req.file){ /*<--- este if es para que recargue la pagina si no carga una imagen*/
-            let newProductCart = {
-                id: req.body.id,
-                img: req.file.filename,
-                destino: req.body.destino,
-                dias: req.body.dias,
-                precio: req.body.precio,
-                ofertas: req.body.ofertas,
-                ida: req.body.ida,
-                vuelta: req.body.vuelta,
-                hospedaje: req.body.hospedaje,
-                vehiculo: req.body.vehiculo,
-                excursion1: req.body.excursion1,
-                excursion2: req.body.excursion2
-            }
-            res.send(newProductCart)        
-            //GUARDAR
-            //Primero leer el archivo existente en este caso en "archivoUsuario"
-            
-            //Segundo descomprimir archivo json dentro de un if para saber que el JSON no nos haya llegado vacio 
-            let producto; //IMPORTANTE declararla por fuera (no sabía que se podía declarar una variable así)
-            if(archivoJSON == ""){
-                producto = [];
-            } else {
-                producto = JSON.parse(archivoJSON);
-            }
-            //Tercero pushear el usuario nuevo y pasarlo a JSON.stingify
-            producto.push(newProductCart);
-            productoJSON = JSON.stringify(producto);
-            fs.writeFileSync('../productCart.json', productoJSON);  
-        } else {
-            res.render('./producto/agregarProducto')
-        }       
-    }, 
+        let allProduct = fs.readFileSync(path.join(__dirname, "../data/productCart.json" ) ,"utf-8");
+        let mostrar = JSON.parse(allProduct);
+        let newProduct = req.body
+        mostrar.push(newProduct) ;
+
+        fs.writeFileSync(path.join(__dirname, "../data/productCart.json" ), JSON.stringify(mostrar,null, " "));
+
+        res.send(mostrar);
+
+        
+        }, 
+
     edit: (req, res) => {
         let idProduct = req.params.id;
         const modifyProduct = producto.filter(x => x.id == idProduct)
