@@ -38,5 +38,20 @@ module.exports = (sequelize, DataType) => {
     
 } 
 
+let config ={
+    tableName: "userProducts",
+    timestamps: true,
+    };
+    // PRIMERA ASOCIACION PRODUCTO ONE-TO-MANAY USER-PRODUCTS // 
+    const userProducts= sequelize.define (alias,cols,config);
 
+    userProducts.associate = function(models){
+        userProducts.belongsTo(models.products,{
+            as:"assocUno",
+            foreignKey: "product_id"
+            
+        })
+
+        return userProducts
+}
 }

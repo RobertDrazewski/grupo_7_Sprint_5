@@ -64,7 +64,7 @@ module.exports = (sequelize, DataType) => {
                     as:"assocUno"
                 })
              }
-
+                return Products
 } 
 
 

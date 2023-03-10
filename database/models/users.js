@@ -36,6 +36,19 @@ module.exports = (sequelize, DataType) => {
          },
     
 } 
+let config ={
+    tableName: "users",
+    timestamps: true,
+    };
+    // PRIMERA ASOCIACION PRODUCTO ONE-TO-MANAY USER-PRODUCTS // 
+    const Users= sequelize.define (alias,cols,config);
+    Users.associate = function(models){
+        Users.hasMany(models.userProducts,{//cambie la relacion a muchos porque en el diagrama estaba asi
+            foreignKey: "user_Product_id",
+            as:"assocUno"
+        })
+    }
 
+    return Users
 
 }
