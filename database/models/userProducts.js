@@ -7,8 +7,9 @@ module.exports = (sequelize, DataType) => {
             autoIncrement : true,
             allowNull : false
         } ,
-        name:{
+        user_id:{
             type: DataType.VARCHAR,
+            foreignKey: true,
         } ,
         email: {
         type: DataType.VARCHAR,

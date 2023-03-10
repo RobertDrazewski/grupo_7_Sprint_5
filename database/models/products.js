@@ -41,6 +41,7 @@ module.exports = (sequelize, DataType) => {
             
          },
         image :{
+            
             type: DataType.VARCHAR,
          },
          creation_date :{
