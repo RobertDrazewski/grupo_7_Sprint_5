@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 11, 2023 at 02:22 PM
+-- Generation Time: Mar 11, 2023 at 08:47 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `destinations`
 --
+-- Creation: Mar 10, 2023 at 10:38 PM
+-- Last update: Mar 11, 2023 at 01:26 PM
+--
 
 CREATE TABLE `destinations` (
   `destination_id` int(11) NOT NULL,
@@ -34,10 +37,20 @@ CREATE TABLE `destinations` (
   `season` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `destinations`
+--
+
+INSERT INTO `destinations` (`destination_id`, `name`, `ranking`, `season`) VALUES
+(1, 'Mendoza', '5', 'otoño'),
+(2, 'Salta', '4', 'verano');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `products`
+--
+-- Creation: Mar 11, 2023 at 06:34 PM
 --
 
 CREATE TABLE `products` (
@@ -52,14 +65,16 @@ CREATE TABLE `products` (
   `vehicle_id` int(11) DEFAULT NULL,
   `tour` varchar(45) DEFAULT NULL,
   `image` varchar(45) DEFAULT NULL,
-  `creation_date` varchar(45) DEFAULT NULL,
-  `due_date` varchar(45) DEFAULT NULL
+  `creation_date` date DEFAULT NULL,
+  `due_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `userProducts`
+--
+-- Creation: Mar 11, 2023 at 07:33 PM
 --
 
 CREATE TABLE `userProducts` (
@@ -75,24 +90,28 @@ CREATE TABLE `userProducts` (
 --
 -- Table structure for table `users`
 --
+-- Creation: Mar 11, 2023 at 06:23 PM
+--
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `country` varchar(45) DEFAULT NULL,
-  `phone_number` varchar(45) DEFAULT NULL,
+  `phone_number` int(45) DEFAULT NULL,
   `user` varchar(45) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
   `profile` varchar(45) DEFAULT NULL,
   `avatar` varchar(45) DEFAULT NULL,
-  `registration_date` varchar(45) DEFAULT NULL
+  `registration_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `vehicles`
+--
+-- Creation: Mar 10, 2023 at 10:39 PM
 --
 
 CREATE TABLE `vehicles` (
@@ -118,13 +137,17 @@ ALTER TABLE `destinations`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`product_id`);
+  ADD PRIMARY KEY (`product_id`),
+  ADD UNIQUE KEY `destination_id` (`destination_id`,`vehicle_id`),
+  ADD KEY `productVehicleFk` (`vehicle_id`);
 
 --
 -- Indexes for table `userProducts`
 --
 ALTER TABLE `userProducts`
-  ADD PRIMARY KEY (`user_product_id`);
+  ADD PRIMARY KEY (`user_product_id`),
+  ADD UNIQUE KEY `user_id` (`user_id`,`product_id`),
+  ADD KEY `productId` (`product_id`);
 
 --
 -- Indexes for table `users`
@@ -137,6 +160,34 @@ ALTER TABLE `users`
 --
 ALTER TABLE `vehicles`
   ADD PRIMARY KEY (`vehicle_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `productDestinationFk` FOREIGN KEY (`destination_id`) REFERENCES `destinations` (`destination_id`),
+  ADD CONSTRAINT `productVehicleFk` FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles` (`vehicle_id`);
+
+--
+-- Constraints for table `userProducts`
+--
+ALTER TABLE `userProducts`
+  ADD CONSTRAINT `UserId` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  ADD CONSTRAINT `productId` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
