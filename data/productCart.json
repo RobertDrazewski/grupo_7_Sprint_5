@@ -14,7 +14,6 @@
   "excursion2": "Travesia 4x4",
   "imgDescription": "5"
  },
- 
  {
   "id": "5",
   "destino": "jujuy",
@@ -29,5 +28,20 @@
   "excursion2": "lagos",
   "imgDescription": "Las calles de mendoza son iguales a las de salta",
   "img": "img-1678149238959.jpg"
+ },
+ {
+  "id": "15",
+  "destino": "Cba",
+  "dias": "3",
+  "precio": "215",
+  "ofertas": "20%",
+  "ida": "12/02/2023",
+  "vuelta": "13/02/2023",
+  "hospedaje": "hotel",
+  "vehiculo": "si",
+  "excursion1": "barco",
+  "excursion2": "caminata",
+  "imgDescription": "mi primer viaje",
+  "img": "img-1678484472676.jpg"
  }
 ]
