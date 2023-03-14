@@ -7,6 +7,9 @@ module.exports = (sequelize, DataType) => {
             autoIncrement : true,
             allowNull : false
         } ,
+        imgURL:{
+            type: DataType.VARCHAR,
+         },
         destination_id:{
             type: DataType.INTERGER,
             foreignKey: true,
@@ -32,23 +35,20 @@ module.exports = (sequelize, DataType) => {
         lodging :{
             type: DataType.VARCHAR
         },
-        vehicle :{
+        vehicle_id :{
            type: DataType.VARCHAR,
             foreignKey: true
         },
         tour:{
-            type: DataType.VARCHAR,
-            
+            type: DataType.VARCHAR,   
          },
-        image :{
-            
-            type: DataType.VARCHAR,
+         tour2:{
+            type: DataType.VARCHAR,   
          },
-         creation_date :{
-            type: DataType.DATE,
-            
+         creationDate :{
+            type: DataType.DATE,  
          },
-         due_date :{
+         dueDate :{
             type: DataType.DATE,
          },
 }

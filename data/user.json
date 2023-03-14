@@ -98,5 +98,15 @@
   "password": "$2a$10$H0Zi1UvNTX5QNluOYt23YOEU90NOlSvNlFShJuJ3jqhRpqN/1E8D2",
   "profile": "Cliente",
   "avatar": "banner-transparent.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Florencia Sanchez",
+  "email": "saancheezflooreenciiaa@gmail.com",
+  "country": "Argentina",
+  "phoneNumber": "+543512540085",
+  "password": "$2a$10$5pRuiuXuFOT.U.cxOlyyZuh6xdsWsp4toDqC9q6OirCwl4jM0Aecy",
+  "profile": "Administrador",
+  "avatar": ""
  }
 ]

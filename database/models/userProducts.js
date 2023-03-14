@@ -7,34 +7,20 @@ module.exports = (sequelize, DataType) => {
             autoIncrement : true,
             allowNull : false
         } ,
-        user_id:{
-            type: DataType.VARCHAR,
+        product_id:{
+            type: DataType.INTERGER,
             foreignKey: true,
         } ,
-        email: {
-        type: DataType.VARCHAR,
-        },
-        country: {
-            type: DataType.VARCHAR,  
-        },
-        phone_number: {
+        user_id:{
             type: DataType.INTERGER,
+            foreignKey: true,
+        } ,
+        price: {
+        type: DataType.FLOAT,
         },
-        user: {
-            type: DataType.VARCHAR,
-        },
-        password: {
-            type: DataType.VARCHAR,
-        },
-        profile :{
-            type: DataType.VARCHAR,
-        },
-        avatar :{
-           type: DataType.VARCHAR,
-        },
-        registration_date:{
+        process_date: {
             type: DataType.DATE,  
-         },
+        }
     
 } 
 

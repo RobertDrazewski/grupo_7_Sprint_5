@@ -30,6 +30,21 @@
   "img": "img-1678149238959.jpg"
  },
  {
+<<<<<<< HEAD
+  "id": "15",
+  "destino": "Cba",
+  "dias": "3",
+  "precio": "215",
+  "ofertas": "20%",
+  "ida": "12/02/2023",
+  "vuelta": "13/02/2023",
+  "hospedaje": "hotel",
+  "vehiculo": "si",
+  "excursion1": "barco",
+  "excursion2": "caminata",
+  "imgDescription": "mi primer viaje",
+  "img": "img-1678484472676.jpg"
+=======
   "id": "3",
   "destino": "Buenos Aires",
   "dias": "12",
@@ -43,5 +58,6 @@
   "excursion2": "night out",
   "imgDescription": "Es la ciudad mas visitada de america del sur",
   "img": "img-1678542080360.jpg"
+>>>>>>> 8de5463b01ee7490517055a10c0758ce13893bdb
  }
 ]

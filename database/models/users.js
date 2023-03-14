@@ -19,9 +19,6 @@ module.exports = (sequelize, DataType) => {
         phone_number: {
             type: DataType.INTERGER,
         },
-        user: {
-            type: DataType.VARCHAR,
-        },
         password: {
             type: DataType.VARCHAR,
         },
